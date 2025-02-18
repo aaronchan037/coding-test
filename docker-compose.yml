@@ -1,0 +1,14 @@
+services:
+  texlive:
+    # image: chanzz0/texlive:latest
+    image: texlive:latest
+    # 限制内存使用空间
+    # mem_limit: 4gb
+    volumes:
+      - ./coding:/work
+    working_dir: /work
+    # command: sh -c "tlmgr update --self --all --repository https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet"
+    # command: fc-list :lang=en | grep roboto
+    # command: python3 --version
+    # command: sh setup.sh
+    command: tail -f /dev/null
